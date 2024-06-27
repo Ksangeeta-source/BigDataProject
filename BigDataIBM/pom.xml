@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>BigDataIBM</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <trino.version>359</trino.version>
+        <aerospike.version>5.1.11</aerospike.version>
+        <guava.version>30.1.1-jre</guava.version>
+        <airlift.version>208</airlift.version>
+        <slice.version>0.40</slice.version>
+        <jackson.version>2.13.0</jackson.version>
+        <testng.version>7.4.0</testng.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.trino</groupId>
+            <artifactId>trino-spi</artifactId>
+            <version>${trino.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aerospike</groupId>
+            <artifactId>aerospike-client</artifactId>
+            <version>${aerospike.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <!--suppress UnresolvedMavenProperty -->
+            <version>${guava.version}</version>
+        </dependency>
+    <dependency>
+        <groupId>io.airlift</groupId>
+        <artifactId>configuration</artifactId>
+        <version>${airlift.version}</version>
+    </dependency>
+
+    <!-- Airlift Bootstrap -->
+    <dependency>
+        <groupId>io.airlift</groupId>
+        <artifactId>bootstrap</artifactId>
+        <version>${airlift.version}</version>
+    </dependency>
+
+    <!-- Airlift JSON -->
+    <dependency>
+        <groupId>io.airlift</groupId>
+        <artifactId>json</artifactId>
+        <version>${airlift.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.airlift</groupId>
+        <artifactId>slice</artifactId>
+        <version>${slice.version}</version>
+    </dependency>
+
+    <!-- Jackson for JSON processing -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson.version}</version>
+    </dependency>
+
+    <!-- Test Dependencies -->
+    <dependency>
+        <groupId>io.trino</groupId>
+        <artifactId>trino-main</artifactId>
+        <version>${trino.version}</version>
+        <scope>test</scope>
+    </dependency>
+
+   <dependency>
+        <groupId>io.trino</groupId>
+        <artifactId>trino-testing</artifactId>
+        <version>${trino.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>${testng.version}</version>
+        <scope>test</scope>
+    </dependency>
+
+
+    </dependencies>
+
+</project>

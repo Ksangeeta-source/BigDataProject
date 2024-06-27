@@ -1,0 +1,8 @@
+connector.name=aerospike
+aerospike.seed-hosts=host1:3000,host2:3000,host3:3000
+aerospike.namespace=test
+aerospike.user=root
+aerospike.password=root
+aerospike.max-connections-per-node=300
+aerospike.connection-timeout=5s
+aerospike.socket-timeout=3s
